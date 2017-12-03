@@ -20,7 +20,7 @@ function getData() {
         alert('There was a problem with the request.');
       }
     }
-    results.textContent = responseObj;
+    results.textContent = request.response;
   };
 }
 
