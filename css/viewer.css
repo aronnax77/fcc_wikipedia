@@ -1,0 +1,45 @@
+.container {
+	width: 50vw;
+	margin: 50px auto;
+	padding: 19px;
+	background-color: #ffffff;
+	border: 1px solid #a7d7f9;
+}
+
+body {
+	font-family: sans-serif;
+	background-color: #f6f6f6;
+}
+
+h1 {
+	font-family: 'Linux Libertine','Georgia','Times',serif;
+}
+
+header {
+	text-align: center;
+}
+
+article {
+	background-color: #cedff2;
+	padding: 0.1em 0.6em;
+	margin-bottom: 10px;
+}
+
+article:hover {
+	cursor: pointer;
+	background-color: lightgrey;
+}
+
+form {
+	padding-bottom: 1vw;
+}
+
+input {
+	margin-bottom: 1vw;
+}
+
+button {
+	font-weight: bold;
+	font-size: 16px;
+	color: #3366cc;
+}
