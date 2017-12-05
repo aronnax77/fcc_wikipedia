@@ -6,36 +6,34 @@ var btn = document.querySelector('button');
 var chb = document.querySelector('#random');
 var sch = document.querySelector('#search');
 var res = document.querySelector('.result');
+res.style.display = 'inline';
+res.textContent = ' ';
+sch.value = '';
+sch.placeholder = 'e.g. Elephant';
+sch.focus();
 btn.addEventListener('click', search);
 
-res.textContent = 'lot and lot';
-
 function search() {
+  res.textContent = ' ';
   //alert('in search');
   //request = new XMLHttpRequest();
   if(TESTING === true){
     url = "assets/data.json";
     alert(chb.value);
     res.textContent = 'not working now';
-  } else if(chb.value === 'on') {
-    alert(chb.value);
-    alert('in if else');
+  } else if (sch.value === '') {
+    res.textContent = '*Please enter a search string and try again';
+    res.style.backgroundColor = 'pink';
+    return false;
+  } else if(chb.checked === true) {
+    alert('chb.checked = ' + chb.checked);
     res.textContent = 'It works';
   } else {
-    //alert('in else');
     url = 'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&origin=*&search=' + sch.value;
-    //alert(url);
-    //alert(request);
   }
-//alert(request);
-//alert(url);
-getData(url);
-//getAlert();
-}
 
-function getAlert() {
-  alert('in getAlert');
-  alert(request);
+getData(url);
+
 }
 
 
@@ -60,8 +58,6 @@ function getData(source) {
   request.send();
 
 }
-//renderArticles(responseObj);
-//getData();
 
 function renderArticles() {
   var section = document.querySelector('section');
@@ -69,15 +65,13 @@ function renderArticles() {
   while(section.firstChild) {
     section.removeChild(section.firstChild);
   }
-
+  alert('length = ' + responseObj[1].length);
   for(var i = 0; i < 10; i++) {
     addArticle(i);
   }
 
   function addArticle(itemNo) {
-    //res.textContent = JSON.parse(responseObj);
-      //var obj = responseObj;
-      //res.textContent = obj[1][1];
+
       var section = document.querySelector('section');
       var article = document.createElement('article');
       var heading = document.createElement('h2');
@@ -91,12 +85,8 @@ function renderArticles() {
 
       article.addEventListener('click', openWindow);
       article.url = responseObj[3][itemNo];
-      //alert('article.url = ' + article.url);
 
       function openWindow(evt) {
-        //alert('In open window');
-        //alert(evt.target);
-        //alert(evt.target.url);
         window.open(this.url, "_blank");
       }
   }

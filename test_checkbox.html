@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <!DOCTYPE html>
+<html>
+<body>
+
+  Checkbox: <input type="checkbox" id="myCheck">
+
+  <button onclick="check()">Check Checkbox</button>
+  <button onclick="uncheck()">Uncheck Checkbox</button>
+  <button onclick="test()">Test Checkbox</button>
+  <br><br>
+  <p></p>
+
+  <script>
+    var para = document.querySelector('p');
+    var chbox = document.querySelector('#myCheck');
+
+    function check() {
+      chbox.checked = true;
+    }
+
+    function uncheck() {
+      chbox.checked = false;
+    }
+
+    function test() {
+      para.style.display = "inline";
+      if(chbox.checked === true) {
+        para.textContent = "The checkbox is checked.";
+        para.style.backgroundColor = "lightgreen";
+      } else {
+        para.textContent = "The checkbox is not checked.";
+        para.style.backgroundColor = "pink";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+</body>
+</html>
