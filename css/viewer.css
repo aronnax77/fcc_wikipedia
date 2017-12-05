@@ -1,3 +1,8 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 .container {
 	width: 50vw;
 	margin: 50px auto;
@@ -44,4 +49,21 @@ button {
 	font-weight: bold;
 	font-size: 16px;
 	color: #3366cc;
+}
+
+@media only screen and (max-width:1200px) {
+  /* For medium size screens: */
+  .container {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile devices: */
+  .container {
+    width: 100vw;
+		margin: 20px auto;
+		padding: 5px;
+		padding-top: 20px;
+  }
 }
