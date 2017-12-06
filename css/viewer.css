@@ -1,3 +1,31 @@
+/******************************************************************************
+TABLE OF CONTENTS
+
+AUTHOR            - Richard Myatt
+DATE              - 6 December 2017
+
+
+GENERAL STYLING                - main container and general styling
+FORM STYLING                   - form and button styling
+ARTICLE STYLING                - article styling
+RESPONSIVE STYLING             - responsive layout styling
+
+
+COLOUR PALETTE
+
+lightgrey                      - background colour ariticle on hover
+#cedff2                        - ariticle panel background light blue
+#ffffff                        - main container background white
+#a7d7f9                        - main container border blue
+#f6f6f6                        - body background grey
+#3366cc                        - button font blue
+
+
+******************************************************************************/
+
+/******************************************************************************
+  General styling begins
+******************************************************************************/
 * {
 	margin: 0;
 	padding: 0;
@@ -12,16 +40,39 @@
 	border: 1px solid #a7d7f9;
 }
 
-body {
-	font-family: sans-serif;
-	background-color: #f6f6f6;
-}
-
 h1 {
 	font-family: 'Linux Libertine','Georgia','Times',serif;
 	padding-bottom: 20px;
 }
 
+body {
+	font-family: sans-serif;
+	background-color: #f6f6f6;
+}
+/* General styling ends */
+
+/******************************************************************************
+  Form styling begins
+******************************************************************************/
+form {
+	padding-bottom: 1vw;
+}
+
+input {
+	margin-bottom: 1vw;
+}
+
+button {
+	font-weight: bold;
+	font-size: 16px;
+	color: #3366cc;
+}
+/* Form styling ends */
+
+
+/******************************************************************************
+  Article styling begins
+******************************************************************************/
 header {
 	text-align: center;
 }
@@ -36,21 +87,11 @@ article:hover {
 	cursor: pointer;
 	background-color: lightgrey;
 }
+/* Article styling ends */
 
-form {
-	padding-bottom: 1vw;
-}
-
-input {
-	margin-bottom: 1vw;
-}
-
-button {
-	font-weight: bold;
-	font-size: 16px;
-	color: #3366cc;
-}
-
+/******************************************************************************
+  Res styling begins
+******************************************************************************/
 @media only screen and (max-width:1200px) {
   /* For medium size screens: */
   .container {
@@ -67,3 +108,4 @@ button {
 		padding-top: 20px;
   }
 }
+/* Responsive styling ends */

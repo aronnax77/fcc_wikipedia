@@ -1,7 +1,13 @@
+/* Design of a Widipedia Viewer, an exercise set by freecodecamp.
+
+      Author: Richard Myatt
+      Date: 6 December 2017
+
+*/
+
+
 var url, responseObj, request;
 
-
-var TESTING = false;
 var btn = document.querySelector('button');     // Search button
 var rand = document.querySelector('#random');   // Randowm search button
 var sch = document.querySelector('#search');    // Search input box
